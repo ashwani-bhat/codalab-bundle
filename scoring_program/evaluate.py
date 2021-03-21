@@ -38,7 +38,7 @@ if os.path.isdir(submit_dir) and os.path.isdir(truth_dir):
     submission_answer_file = os.path.join(submit_dir, "answer.txt")
     submission_answer = open(submission_answer_file, 'r')
     submission_answer = submission_answer.readlines()
-    
+    print(truth)
     total_num = len(truth)
     total_bleu_scores = 0
     total_meteor_scores = 0
@@ -49,8 +49,9 @@ if os.path.isdir(submit_dir) and os.path.isdir(truth_dir):
     bleu_result = total_bleu_scores/total_num
     meteor_result = total_meteor_scores/total_num
 
-    output_file.write('correct:1')
-    # output_file.write('\nMeteor Score: ' + str(meteor_result))
+    output_file.write('bleu_score: ' + str(bleu_result))
+    output_file.write('\n')
+    output_file.write('meteor: ' + str(meteor_result))
     output_file.close()
 
 
