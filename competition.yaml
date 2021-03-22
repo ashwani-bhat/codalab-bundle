@@ -1,20 +1,39 @@
-title: Example Hello World Competition
+title: "NMT: Hindi to English"
 description: An example competition where submissions should output "Hello World!"
 image: logo.jpg
 has_registration: True
+end_date: 2021-04-26
 html:
     overview: overview.html
     evaluation: evaluation.html
     terms: terms_and_conditions.html
     data: data.html
+
 phases:
     1:
         phasenumber: 1
-        label: "Assignment"
-        start_date: 2013-06-30
-        max_submissions: 1000
+        label: "Assignment Phase 1"
+        start_date: 2021-03-20
+        max_submissions: 5
         scoring_program: scoring_program.zip
-        reference_data: reference_data.zip
+        reference_data: reference_data_1.zip
+        color: purple
+        description: 'The results on the test set will be there on the leaderboard'
+        input_data: input.zip
+        max_submissions_per_day: 5
+
+    2:
+        phasenumber: 2
+        label: "Assignment Phase 2"
+        start_date: 2021-03-24
+        max_submissions: 5
+        scoring_program: scoring_program.zip
+        reference_data: reference_data_2.zip
+        color: green
+        description: 'The results on the test set will be there on the leaderboard'
+        input_data: input.zip
+        max_submissions_per_day: 5
+
 leaderboard:
     leaderboards:
         RESULTS: &RESULTS
@@ -25,9 +44,26 @@ leaderboard:
             leaderboard: *RESULTS
             label: Bleu Score
             rank: 1
-            numeric_format: 1
+            numeric_format: 3
         meteor:
             leaderboard: *RESULTS
             label: Meteor
             rank: 1
-            numeric_format: 1
+            numeric_format: 3
+        
+    # leaderboards:
+    #     RESULTS: &RESULTSNEW
+    #         label: Results
+    #         rank: 1
+    # columns:
+    #     bleu_score:
+    #         leaderboard: *RESULTSNEW
+    #         label: Bleu Score
+    #         rank: 1
+    #         numeric_format: 3
+    #     meteor:
+    #         leaderboard: *RESULTSNEW
+    #         label: Meteor
+    #         rank: 1
+    #         numeric_format: 3
+
