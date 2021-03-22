@@ -38,7 +38,11 @@ if os.path.isdir(submit_dir) and os.path.isdir(truth_dir):
     submission_answer_file = os.path.join(submit_dir, "answer.txt")
     submission_answer = open(submission_answer_file, 'r')
     submission_answer = submission_answer.readlines()
-    print(truth)
+    
+    # print(truth)
+    # print('#'* 100)
+    # print(submission_answer)
+
     total_num = len(truth)
     total_bleu_scores = 0
     total_meteor_scores = 0
