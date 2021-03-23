@@ -10,7 +10,7 @@ cp -r '../assets' $DIR
 cd .. # bundle/
 
 # Begin zipping each folder
-for filename in reference_data_1 reference_data_2 scoring_program input
+for filename in reference_data_1 reference_data_2 reference_data_3 reference_data_4 reference_data_5 scoring_program input
 do
   cd $filename
   echo 'Zipping: '$filename

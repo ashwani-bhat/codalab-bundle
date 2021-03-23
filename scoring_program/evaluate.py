@@ -3,7 +3,7 @@ import sys
 import os
 import os.path
 import nltk
-
+nltk.download('wordnet')
 import math
 from fractions import Fraction
 import warnings

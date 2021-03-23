@@ -2,7 +2,7 @@ title: "NMT: Hindi to English"
 description: An example competition where submissions should output "Hello World!"
 image: logo.jpg
 has_registration: True
-end_date: 2021-04-26
+end_date: 2021-04-24
 html:
     overview: overview.html
     evaluation: evaluation.html
@@ -13,7 +13,7 @@ phases:
     1:
         phasenumber: 1
         label: "Assignment Phase 1"
-        start_date: 2021-03-20
+        start_date: 2021-03-29
         max_submissions: 5
         scoring_program: scoring_program.zip
         reference_data: reference_data_1.zip
@@ -25,11 +25,47 @@ phases:
     2:
         phasenumber: 2
         label: "Assignment Phase 2"
-        start_date: 2021-03-24
+        start_date: 2021-04-05
         max_submissions: 5
         scoring_program: scoring_program.zip
         reference_data: reference_data_2.zip
         color: green
+        description: 'The results on the test set will be there on the leaderboard'
+        input_data: input.zip
+        max_submissions_per_day: 5
+    
+    3:
+        phasenumber: 3
+        label: "Assignment Phase 3"
+        start_date: 2021-04-12
+        max_submissions: 5
+        scoring_program: scoring_program.zip
+        reference_data: reference_data_3.zip
+        color: blue
+        description: 'The results on the test set will be there on the leaderboard'
+        input_data: input.zip
+        max_submissions_per_day: 5
+
+    4:
+        phasenumber: 4
+        label: "Assignment Phase 4"
+        start_date: 2021-04-19
+        max_submissions: 5
+        scoring_program: scoring_program.zip
+        reference_data: reference_data_4.zip
+        color: yellow
+        description: 'The results on the test set will be there on the leaderboard'
+        input_data: input.zip
+        max_submissions_per_day: 5
+
+    5:
+        phasenumber: 5
+        label: "Final Phase"
+        start_date: 2021-04-23
+        max_submissions: 5
+        scoring_program: scoring_program.zip
+        reference_data: reference_data_5.zip
+        color: magenta
         description: 'The results on the test set will be there on the leaderboard'
         input_data: input.zip
         max_submissions_per_day: 5
@@ -42,12 +78,12 @@ leaderboard:
     columns:
         bleu_score:
             leaderboard: *RESULTS
-            label: Bleu Score
+            label: BLEU Score
             rank: 1
             numeric_format: 3
         meteor:
             leaderboard: *RESULTS
-            label: Meteor
+            label: METEOR
             rank: 1
             numeric_format: 3
         
