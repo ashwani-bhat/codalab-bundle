@@ -2,6 +2,7 @@ title: "NMT: Hindi to English"
 description: An example competition where submissions should output "Hello World!"
 image: logo.jpg
 has_registration: True
+competition_docker_image: 'codalab/codalab-legacy:py37'
 end_date: 2021-04-24
 html:
     overview: overview.html
